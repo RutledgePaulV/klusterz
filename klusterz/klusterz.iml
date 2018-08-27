@@ -14,39 +14,43 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Leiningen: cheshire:5.8.0" level="project" />
+    <orderEntry type="library" name="Leiningen: aesahaettr:0.1.2" level="project" />
     <orderEntry type="library" name="Leiningen: clojure-complete:0.2.4" level="project" />
     <orderEntry type="library" name="Leiningen: com.fasterxml.jackson.core/jackson-annotations:2.7.0" level="project" />
-    <orderEntry type="library" name="Leiningen: com.fasterxml.jackson.core/jackson-core:2.9.0" level="project" />
+    <orderEntry type="library" name="Leiningen: com.fasterxml.jackson.core/jackson-core:2.7.7" level="project" />
     <orderEntry type="library" name="Leiningen: com.fasterxml.jackson.core/jackson-databind:2.7.7" level="project" />
-    <orderEntry type="library" name="Leiningen: com.fasterxml.jackson.dataformat/jackson-dataformat-cbor:2.9.0" level="project" />
-    <orderEntry type="library" name="Leiningen: com.fasterxml.jackson.dataformat/jackson-dataformat-smile:2.9.0" level="project" />
     <orderEntry type="library" name="Leiningen: com.fasterxml.jackson.dataformat/jackson-dataformat-yaml:2.7.7" level="project" />
     <orderEntry type="library" name="Leiningen: com.fasterxml.jackson.module/jackson-module-jaxb-annotations:2.7.5" level="project" />
     <orderEntry type="library" name="Leiningen: com.github.mifmif/generex:1.0.1" level="project" />
+    <orderEntry type="library" name="Leiningen: com.google.guava/guava:15.0" level="project" />
     <orderEntry type="library" name="Leiningen: com.squareup.okhttp3/logging-interceptor:3.9.1" level="project" />
     <orderEntry type="library" name="Leiningen: com.squareup.okhttp3/okhttp:3.9.1" level="project" />
     <orderEntry type="library" name="Leiningen: com.squareup.okio/okio:1.13.0" level="project" />
+    <orderEntry type="library" name="Leiningen: com.taoensso/nippy:2.1.0" level="project" />
     <orderEntry type="library" name="Leiningen: dk.brics.automaton/automaton:1.11-8" level="project" />
-    <orderEntry type="library" name="Leiningen: io.fabric8/kubernetes-client:3.1.8" level="project" />
-    <orderEntry type="library" name="Leiningen: io.fabric8/kubernetes-model:2.0.4" level="project" />
+    <orderEntry type="library" name="Leiningen: erajure:0.0.3" level="project" />
+    <orderEntry type="library" name="Leiningen: expectations:1.4.49" level="project" />
+    <orderEntry type="library" name="Leiningen: io.fabric8/kubernetes-client:4.0.4" level="project" />
+    <orderEntry type="library" name="Leiningen: io.fabric8/kubernetes-model:3.0.2" level="project" />
     <orderEntry type="library" name="Leiningen: io.fabric8/zjsonpatch:0.3.0" level="project" />
+    <orderEntry type="library" name="Leiningen: javax.cache/cache-api:1.0.0" level="project" />
     <orderEntry type="library" name="Leiningen: javax.validation/validation-api:1.1.0.Final" level="project" />
-    <orderEntry type="library" name="Leiningen: org.clojure/clojure:1.9.0" level="project" />
-    <orderEntry type="library" name="Leiningen: org.clojure/core.async:0.4.474" level="project" />
-    <orderEntry type="library" name="Leiningen: org.clojure/core.cache:0.6.5" level="project" />
-    <orderEntry type="library" name="Leiningen: org.clojure/core.memoize:0.5.9" level="project" />
-    <orderEntry type="library" name="Leiningen: org.clojure/core.specs.alpha:0.1.24" level="project" />
-    <orderEntry type="library" name="Leiningen: org.clojure/data.priority-map:0.0.7" level="project" />
-    <orderEntry type="library" name="Leiningen: org.clojure/spec.alpha:0.1.143" level="project" />
-    <orderEntry type="library" name="Leiningen: org.clojure/tools.analyzer.jvm:0.7.0" level="project" />
-    <orderEntry type="library" name="Leiningen: org.clojure/tools.analyzer:0.6.9" level="project" />
+    <orderEntry type="library" name="Leiningen: junit:4.8.1" level="project" />
+    <orderEntry type="library" name="Leiningen: org.apache.ignite/ignite-core:2.6.0" level="project" />
+    <orderEntry type="library" name="Leiningen: org.apache.ignite/ignite-kubernetes:2.6.0" level="project" />
+    <orderEntry type="library" name="Leiningen: org.clojure/clojure:1.10.0-alpha6" level="project" />
+    <orderEntry type="library" name="Leiningen: org.clojure/core.specs.alpha:0.2.36" level="project" />
+    <orderEntry type="library" name="Leiningen: org.clojure/spec.alpha:0.2.168" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/tools.nrepl:0.2.12" level="project" />
-    <orderEntry type="library" name="Leiningen: org.clojure/tools.reader:1.0.0-beta4" level="project" />
-    <orderEntry type="library" name="Leiningen: org.ow2.asm/asm-all:4.2" level="project" />
+    <orderEntry type="library" name="Leiningen: org.codehaus.jackson/jackson-core-asl:1.9.13" level="project" />
+    <orderEntry type="library" name="Leiningen: org.codehaus.jackson/jackson-mapper-asl:1.9.13" level="project" />
+    <orderEntry type="library" name="Leiningen: org.gridgain/ignite-shmem:1.0.0" level="project" />
+    <orderEntry type="library" name="Leiningen: org.iq80.snappy/snappy:0.3" level="project" />
+    <orderEntry type="library" name="Leiningen: org.jetbrains/annotations:13.0" level="project" />
+    <orderEntry type="library" name="Leiningen: org.mockito/mockito-all:1.8.0" level="project" />
     <orderEntry type="library" name="Leiningen: org.slf4j/jul-to-slf4j:1.7.13" level="project" />
     <orderEntry type="library" name="Leiningen: org.slf4j/slf4j-api:1.7.13" level="project" />
     <orderEntry type="library" name="Leiningen: org.yaml/snakeyaml:1.15" level="project" />
-    <orderEntry type="library" name="Leiningen: tigris:0.1.1" level="project" />
+    <orderEntry type="library" name="Leiningen: pjstadig/humane-test-output:0.8.3" level="project" />
   </component>
 </module>

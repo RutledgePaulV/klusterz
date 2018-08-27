@@ -1,31 +1,26 @@
 (ns klusterz.core
-  (:require [clojure.java.shell :as shell]
-            [clojure.string :as strings]
-            [klusterz.client :as client]
-            [clojure.core.async :as async]))
+  (:require [klusterz.kubernetes :as k8s])
+  (:import (org.apache.ignite Ignition)
+           (org.apache.ignite.configuration IgniteConfiguration)
+           (org.apache.ignite.spi.discovery.tcp TcpDiscoverySpi)))
 
-(def CLIENT (atom nil))
+(defn ^IgniteConfiguration get-default-config []
+  (IgniteConfiguration.))
 
-(defn run [& commands]
-  (let [result (apply shell/sh commands)]
-    (if-not (zero? (:exit result))
-      (throw (Exception. ^String (:err result)))
-      (:out result))))
+(defn get-kubernetes-config []
+  (doto (get-default-config)
+    (.setDiscoverySpi
+      (doto (TcpDiscoverySpi.)
+        (.setIpFinder (k8s/get-pod-ip-finder))))))
 
-(defn get-hostname []
-  (strings/trim (run "hostname")))
+(defn start-server
+  ([] (start-server (get-kubernetes-config)))
+  ([^IgniteConfiguration config]
+   (.setClientMode config false)
+   (Ignition/start config)))
 
-(defn cluster! [{:keys [kubernetes-api]}]
-  (let [client (reset! CLIENT (client/create-client kubernetes-api))]
-    (client/with-client client
-      (if (client/within-kubernetes?)
-        (when-some [pod (client/get :pod (get-hostname))]
-          (let [labels (get-in pod [:metadata :labels] {})
-                events (client/watch :pod labels)]
-            (async/go-loop [event (async/<! events)]
-              (when (some? event)
-                (println "Received event" event)
-                (recur (async/<! events))))))
-        (throw (IllegalStateException. "Not within k8s."))))))
-
-
+(defn start-client
+  ([] (start-client (get-kubernetes-config)))
+  ([^IgniteConfiguration config]
+   (.setClientMode config true)
+   (Ignition/start config)))
